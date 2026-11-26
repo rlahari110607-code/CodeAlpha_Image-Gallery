@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISORA | Explore the World Through Images</title>
+    <meta name="description"
+          content="Explore breathtaking photography from around the world with PIXORA.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- External JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header" id="top">
+    <nav class="navbar container">
+        <a class="brand" href="#home">
+            <span class="brand-mark">
+                <i class="fa-solid fa-aperture"></i>
+            </span>
+            VIS<span>ORA</span>
+            <small>VISUAL JOURNAL</small>
+        </a>
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#explore" class="nav-link">Explore</a>
+            <a href="#categories" class="nav-link">Categories</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <a href="#explore" class="nav-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+    </nav>
+</header>
+<main>
+<section class="hero" id="home">
+    <div class="hero-image"></div>
+    <div class="hero-shade"></div>
+    <div class="hero-content container">
+        <p class="eyebrow">
+            <span></span>
+            A WORLD OF VISUAL STORIES
+        </p>
+        <h1>
+            Discover the beauty
+            <br>
+            of <em>every moment.</em>
+        </h1>
+        <p class="hero-description">
+            Explore breathtaking photography from around
+            the world. Find a new perspective in every frame.
+        </p>
+        <a href="#explore" class="button button-primary">
+            Explore the gallery
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+    <a href="#categories" class="scroll-cue">
+        <span></span>
+        SCROLL TO EXPLORE
+    </a>
+</section>
+<section class="section container" id="categories">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">FIND YOUR PERSPECTIVE</p>
+            <h2>
+                Explore by <em>category.</em>
+            </h2>
+        </div>
+        <p class="section-intro">
+            Eight windows into the extraordinary.
+            Choose a world and start exploring.
+        </p>
+    </div>
+    <div class="category-grid" id="categoryGrid">
+            </div>
+
+</section>
+<section class="section gallery-section" id="explore">
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">THE VISORA COLLECTION</p>
+                <h2>
+                    Moments worth <em>keeping.</em>
+                </h2>
+            </div>
+            <p class="section-intro">
+                A collection of places, details and
+                fleeting moments captured through a lens.
+            </p>
+        </div>
+        <div class="gallery-toolbar">
+            <div class="filter-list" id="filterList">
+                <button class="filter-button active"
+                        data-filter="all">
+                    All Images
+                </button>
+                <button class="filter-button"
+                        data-filter="nature">
+                    Nature
+                </button>
+                <button class="filter-button"
+                        data-filter="architecture">
+                    Architecture
+                </button>
+                <button class="filter-button"
+                        data-filter="wildlife">
+                    Wildlife
+                </button>
+                <button class="filter-button"
+                        data-filter="ocean">
+                    Ocean
+                </button>
+                <button class="filter-button"
+                        data-filter="travel">
+                    Travel
+                </button>
+                <button class="filter-button"
+                        data-filter="space">
+                    Space
+                </button>
+                <button class="filter-button"
+                        data-filter="art">
+                    Art
+                </button>
+                <button class="filter-button"
+                        data-filter="food">
+                    Food
+                </button>
+            </div>
+                       <label class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search"
+                       id="searchInput"
+                       placeholder="Search the collection...">
+                <kbd>/</kbd>
+            </label>
+        </div>
+                <div class="gallery-meta">
+            <p id="resultLabel">
+                Showing all photographs
+            </p>
+            <span>
+                <b id="imageCount">24</b>
+                PHOTOGRAPHS
+            </span>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+        </div>
+        <div class="empty-state" id="emptyState" hidden>
+            <i class="fa-regular fa-images"></i>
+            <h3>No photographs found</h3>
+            <p>
+                Try another keyword or choose a different category.
+            </p>
+            <button class="button button-outline"
+                    id="resetGallery">
+                Reset gallery
+            </button>
+        </div>
+    </div>
+</section>
+<section class="section container about-section" id="about">
+    <div class="about-visual">
+        <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+            alt="Beautiful mountain lake">
+        <div class="about-stamp">
+            <i class="fa-solid fa-camera-retro"></i>
+            <span>
+                SEE THE
+                <br>
+                UNSEEN
+            </span>
+        </div>
+    </div>
+    <div class="about-copy">
+        <p class="eyebrow">A LITTLE ABOUT VISORA</p>
+        <h2>
+            Photography
+            <br>
+            beyond <em> boundaries. </em>      </h2>
+        <p>
+            VISORA is a visual destination created for those who see beauty in every detail.Discover extraordinary moments through breathtaking collections of natue,wildlife,travel,oceans.
+        </p>
+        <p>
+            Every image is an invitation to pause,
+            look closer, and experience the world
+            from a different point of view.
+        </p>
+        <a href="#explore" class="text-link">
+            Explore the collection
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+<section class="stats-section">
+    <div class="container stats-grid">
+        <div class="stat-item">
+            <strong class="stat-number" data-target="8">0</strong>
+            <span>PHOTO CATEGORIES</span>
+        </div>
+        <div class="stat-item">
+            <strong class="stat-number" data-target="24">0</strong>
+            <span>CURATED PHOTOGRAPHS</span>
+        </div>
+        <div class="stat-item">
+            <strong class="stat-number" data-target="100">0</strong>
+            <span>WAYS TO SEE THE WORLD</span>
+        </div>
+        <div class="stat-item">
+            <strong class="stat-number" data-target="1">0</strong>
+            <span>SHARED LOVE OF IMAGES</span>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="site-footer" id="contact">
+    <div class="container footer-main">
+        <div class="footer-brand">
+            <a class="brand" href="#home">
+                <span class="brand-mark">
+                    <i class="fa-solid fa-aperture"></i>
+                </span>
+                VIS<span>ORA</span>
+            </a>
+            <p>
+                Every picture has a story.
+                Find yours in the frame.
+            </p>
+        </div>
+        <div class="footer-column">
+            <h3>Explore</h3>
+            <a href="#home">Home</a>
+            <a href="#explore">Gallery</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">Our Story</a>
+        </div>
+        <div class="footer-column">
+            <h3>Discover</h3>
+            <a href="#explore" data-footer-filter="nature">
+                Nature
+            </a>
+            <a href="#explore" data-footer-filter="architecture">
+                Architecture
+            </a>
+            <a href="#explore" data-footer-filter="travel">
+                Travel
+            </a>
+            <a href="#explore" data-footer-filter="wildlife">
+                Wildlife
+            </a>
+        </div>
+       </div>
+    <div class="container footer-bottom">
+        <span>
+            © 2026 VISORA.All Rights Reserved.
+        </span>
+        <a href="#top">BACK TO TOP ↑</a>
+        <span>
+            MADE FOR THE LOVE OF IMAGES
+        </span>
+    </div>
+</footer>
+<div class="lightbox"
+     id="lightbox"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Photograph viewer"
+     aria-hidden="true">
+    <button class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image viewer">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button class="lightbox-arrow lightbox-prev"
+            id="lightboxPrev"
+            aria-label="Previous image">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <figure class="lightbox-figure">
+        <img id="lightboxImage" src="" alt="">
+        <figcaption class="lightbox-caption">
+            <div>
+                <p id="lightboxCategory" class="eyebrow"></p>
+                <h2 id="lightboxTitle"></h2>
+                <p id="lightboxDescription"></p>
+            </div>
+            <span id="lightboxCounter"></span>
+        </figcaption>
+    </figure>
+    <button class="lightbox-arrow lightbox-next"
+            id="lightboxNext"
+            aria-label="Next image">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+</body>
+</html>
